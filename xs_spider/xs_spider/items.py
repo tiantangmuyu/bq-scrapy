@@ -6,10 +6,7 @@
 import scrapy
 
 
-class BiqugeItem(scrapy.Item):
+class XsSpiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    
-    zhangjie = scrapy.Field()
-    zhengwen = scrapy.Field()
     pass

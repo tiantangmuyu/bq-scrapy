@@ -1,4 +1,4 @@
-# Scrapy settings for biquge project
+# Scrapy settings for xs_spider project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,30 +7,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'biquge'
+BOT_NAME = 'xs_spider'
 
-SPIDER_MODULES = ['biquge.spiders']
-NEWSPIDER_MODULE = 'biquge.spiders'
+SPIDER_MODULES = ['xs_spider.spiders']
+NEWSPIDER_MODULE = 'xs_spider.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.104 Safari/537.36',
-    #"referer":"https://www.mzitu.com/",
-    "accept-encoding" : "gzip, deflate, br",
-    " accept-language" :"en,zh-CN;q=0.9,zh;q=0.8",
-    "accept" : "*/*",
-    "dnt:" : "1",
-    "x-requested-with" : "",
-    
-    
-    
-
-    }
-
+#USER_AGENT = 'xs_spider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -38,13 +25,13 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.25
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
+#COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -58,13 +45,13 @@ COOKIES_ENABLED = False
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'biquge.middlewares.BiqugeSpiderMiddleware': 543,
+#    'xs_spider.middlewares.XsSpiderSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'biquge.middlewares.BiqugeDownloaderMiddleware': 543,
+#    'xs_spider.middlewares.XsSpiderDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -75,9 +62,9 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'biquge.pipelines.BiqugePipeline': 300,
-}
+#ITEM_PIPELINES = {
+#    'xs_spider.pipelines.XsSpiderPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
