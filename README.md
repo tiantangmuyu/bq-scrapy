@@ -1,5 +1,3 @@
-# scrapy练习
-
-练习scrapy框架
+# scrapy 小说
 
 www.vbiquge.com
