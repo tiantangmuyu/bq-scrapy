@@ -6,7 +6,10 @@
 import scrapy
 
 
-class XsSpiderItem(scrapy.Item):
+class vbSpiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
+    xs_name_path = scrapy.Field()
+    zhangjie = scrapy.Field()
+    zhengwen = scrapy.Field() 
     pass
